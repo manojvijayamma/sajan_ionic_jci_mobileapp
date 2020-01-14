@@ -1,0 +1,53 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button
+            [text]="buttonText"
+            [icon]="buttonIcon">
+        </ion-back-button>
+      </ion-buttons>
+      <ion-title>
+        PAST NGB
+      </ion-title>
+      <!--
+      <ion-buttons slot="end">
+        <ion-button routerLink="/create"><ion-icon name="add-circle"></ion-icon></ion-button>
+      </ion-buttons>
+      -->
+    </ion-toolbar>
+  </ion-header>
+  
+  
+  
+  <ion-searchbar class="serch"></ion-searchbar>
+      
+
+  <ion-row *ngFor="let data of listData">
+       <div class="col-sm-12 col-md-12 box" style="background-image: url(assets/images/blue-color-background-wallpaper-4.jpg);background-size:cover;position: relative;background-position: center center;margin-bottom:20px;
+               ">
+                <div class="col-md-12 col-sm-12" text-center>
+           <div class="col-md-6 leftimg" text-center>
+                <img src="{{data.past_ngb_members_profile_pic}}">
+           </div>
+         </div>
+          <div class="col-md-12 col-sm-12" text-center>
+           <div class="col-md-6 rightcnt" text-center>
+             <h3 >{{data.past_ngb_members_name}}</h3>
+             <h4>{{data.past_ngb_designation}}</h4>
+           </div>
+         </div>
+       
+  
+  
+        <div class="col-md-12">
+            <div id="cont">
+                <ul>
+                  <li> <ion-icon name="home"></ion-icon>{{data.past_ngb_members_working_period}}</li>
+                  <li> <ion-icon name="call"></ion-icon>{{data.past_ngb_members_mobile}} </li>  
+                  <li> <ion-icon name="mail"></ion-icon>{{data.past_ngb_members_email}}</li>
+                 <li> <ion-icon name="pin"></ion-icon>{{data.past_ngb_members_address}}</li>
+             </ul>
+            </div>
+    </div>
+  </div>
+  </ion-row>

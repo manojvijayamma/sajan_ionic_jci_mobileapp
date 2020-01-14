@@ -1,0 +1,82 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button  defaultHref="zone"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      {{title}}
+    </ion-title>
+    <!--
+    <ion-buttons slot="end">
+      <ion-button routerLink="/create"><ion-icon name="add-circle"></ion-icon></ion-button>
+    </ion-buttons>
+    -->
+  </ion-toolbar>
+</ion-header>
+
+
+
+
+<!--<ion-content>
+
+  <ion-searchbar class="serch" [(ngModel)]="searchKey"></ion-searchbar>
+  <ion-row *ngFor="let data of listData | filter : searchKey">
+      <div class="col-sm-12 col-md-12 box" style="background-image: url(assets/images/blue-color-background-wallpaper-4.jpg);background-size:cover;position: relative;background-position: center center;margin-bottom:0px;
+              ">
+              <div class="col-md-12 col-sm-12" text-center>
+          <div class="col-md-6 leftimg" text-center>
+              <img src="assets/images/jc.png">
+          </div>
+        </div>
+        <div class="col-md-12 col-sm-12" text-center>
+          <div class="col-md-6 rightcnt" text-center>
+            <h3 >{{data.lom_name}}</h3>
+            <h4>{{data.zone_members_designation}}</h4>
+          </div>
+        </div>
+
+
+      <div class="col-md-12">
+          <div id="cont">
+              <ul>
+                <li> <ion-icon name="home"></ion-icon>{{data.zone_members_lom}}</li>
+                <li> <ion-icon name="call"></ion-icon>{{data.zone_members_mobile}} </li>  
+                <li> <ion-icon name="mail"></ion-icon>{{data.zone_members_email}}</li>
+                <li> <ion-icon name="pin"></ion-icon>{{data.zone_members_address}}</li>
+            </ul>
+          </div>
+  </div>
+</div>
+</ion-row>
+
+
+  
+
+
+</ion-content>-->
+
+<ion-content>
+
+
+  <ion-list>
+    <ion-item *ngFor="let item of listData" (click)="showDetails(item.lom_id, item.lom_name)">        
+      
+      <div class="item-note" style="font-size:16px">
+        {{item.lom_name}}
+      </div>
+
+      <ion-icon name="arrow-dropright-circle" slot="end"></ion-icon>
+      
+    </ion-item>
+  </ion-list>
+
+
+  
+</ion-content>
+
+
+
+
+
+    
+

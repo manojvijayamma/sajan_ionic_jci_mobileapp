@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar color="primary">
+   <!-- <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>-->
+    <ion-buttons slot="start" (click)="dashboard()">
+      <!-- <ion-menu-button></ion-menu-button>-->
+        <ion-icon name="home" style="font-size:23px;color:#fff"></ion-icon>
+    </ion-buttons>
+    <ion-title>
+      NOM COORDINATORS
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content class="backgrounddetails">
+
+ 
+  <ion-row *ngFor="let data of listData ">
+      <div class="col-sm-12 col-md-12 box" >
+               <div class="col-md-12 col-sm-12" text-center>
+                <div class="col-md-6 leftimg">
+                    <img src="assets/images/jc.png">
+                </div>
+              </div>
+              
+              
+        <div class="col-md-12 col-sm-12" text-center>
+          <div class="col-md-6 rightcnt" text-center>
+            <h3 >{{data.name}}</h3>
+            <h4>{{data.portfolio}}</h4>
+           
+          </div>
+      </div>
+
+
+      <div class="col-md-12">
+          <div id="cont">
+              <ul>
+                <li> <ion-icon name="home"></ion-icon>{{data.lom}}</li>
+                <li (click)="makecall(data.mobile)"> <ion-icon name="call"></ion-icon>{{data.mobile}} </li>  
+                <li (click)="savemail(data.email)"> <ion-icon name="mail"></ion-icon>{{data.email}}</li>
+               
+            </ul>
+          </div>
+  </div>
+</div>
+</ion-row>
+
+
+
+
+  

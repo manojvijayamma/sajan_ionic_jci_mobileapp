@@ -1,0 +1,56 @@
+
+
+
+
+<ion-header>
+  <ion-toolbar color="primary">
+   <!-- <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>-->
+    <ion-buttons slot="start" (click)="dashboard()">
+      <!-- <ion-menu-button></ion-menu-button>-->
+        <ion-icon name="home" style="font-size:23px;"></ion-icon>
+    </ion-buttons>
+    <ion-title>
+      PAST NATIONAL PRESIDENTS
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="backgrounddetails">
+
+  <ion-searchbar class="serch" [(ngModel)]="searchKey"></ion-searchbar>
+<ion-row *ngFor="let data of listData | filter : searchKey">
+    <div class="col-sm-12 col-md-12 box" >
+            <div class="col-md-12 col-sm-12" text-center>
+        <div class="col-md-6 leftimg" text-center>
+            <img src="assets/images/jc.png">
+        </div>
+      </div>
+      <div class="col-md-12 col-sm-12" text-center>
+        <div class="col-md-6 rightcnt" text-center>
+          <h3>{{data.Name}}</h3>
+          <h4>{{data.Year}}</h4>
+        </div>
+    </div>
+
+
+    <div class="col-md-12">
+        <div id="cont">
+            <ul>
+              
+              <li (click)="makecall(data.Tel)"> <ion-icon name="call" ></ion-icon>{{data.Tel}} </li>  
+              <li (click)="savemail(data.Email)"> <ion-icon name="mail"></ion-icon>{{data.Email}}</li>
+              <li> <ion-icon name="pin"></ion-icon>{{data.Address}}</li>
+          </ul>
+        </div>
+</div>
+</div>
+</ion-row>
+
+
+
+
+
+</ion-content>

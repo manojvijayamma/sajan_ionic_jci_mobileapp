@@ -1,0 +1,76 @@
+
+  <!--<ion-header>
+    <ion-toolbar class="new-background-color">
+      <ion-buttons slot="start">
+         <ion-back-button  defaultHref="dashboard"></ion-back-button>
+      </ion-buttons>
+      <ion-title>
+        NGB
+      </ion-title>
+     
+      <ion-buttons slot="end">
+        <ion-button routerLink="/create"><ion-icon name="add-circle"></ion-icon></ion-button>
+      </ion-buttons>
+     
+    </ion-toolbar>
+  </ion-header> -->
+
+
+  <ion-header>
+      <ion-toolbar color="primary">
+       <!-- <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>-->
+        <ion-buttons slot="start" (click)="dashboard()">
+      <!-- <ion-menu-button></ion-menu-button>-->
+        <ion-icon name="home" style="font-size:23px;color:#fff"></ion-icon>
+    </ion-buttons>
+        <ion-title>
+            NGB
+        </ion-title>
+      </ion-toolbar>
+    </ion-header>
+  
+
+  <ion-content class="backgrounddetails">
+
+    <ion-searchbar class="serch" [(ngModel)]="searchKey"></ion-searchbar>
+    <ion-row *ngFor="let data of listData | filter : searchKey">
+        <div class="col-sm-12 col-md-12 box" >
+
+                <div class="col-md-12 col-sm-12 leftimg" text-center>
+                   
+                      <img src="{{data.ngb_profile_picture}}">
+                   
+                </div>
+         <div class="col-md-12 col-sm-12" text-center>
+            <div class="col-md-8 rightcnt" text-center>
+              <h3>{{data.ngb_name}}</h3>
+              <h4>{{data.ngb_designation}}</h4>
+            </div>
+        </div>
+  
+  
+        <div class="col-md-12">
+            <div id="cont">
+                <ul>
+                  <li> <ion-icon name="home" style="color:#3b7ac9"></ion-icon>{{data.ngb_lom}}</li>
+                 <li (click)="makecall(data.ngb_mobile)" value="{{data.ngb_mobile}}"> <ion-icon name="call" style="color:#3b7ac9"></ion-icon>{{data.ngb_mobile}} </li>
+                   <!--<li ng-click="showPopup()"> <ion-icon name="call" style="color:#fff"></ion-icon>{{data.ngb_mobile}}</li> -->
+                  <li (click)="savemail(data.ngb_email)" value="{{data.ngb_email}}"> <ion-icon name="mail" style="color:#3b7ac9"></ion-icon>{{data.ngb_email}}</li>
+                  <li> <ion-icon name="pin" style="color:#3b7ac9"></ion-icon>{{data.ngb_address}}</li>
+              </ul>
+            </div>
+    </div>
+  </div>
+
+  </ion-row>
+
+
+    
+
+
+</ion-content>
+
+    
+   

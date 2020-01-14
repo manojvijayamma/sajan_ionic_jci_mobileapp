@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <!--<ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>-->
+    <ion-buttons slot="start" (click)="dashboard()">
+      <!-- <ion-menu-button></ion-menu-button>-->
+        <ion-icon name="home" style="font-size:23px;color:#fff"></ion-icon>
+    </ion-buttons>
+    <ion-title>
+      Suggest a friend
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content>
+
+ <form #form="ngForm" (ngSubmit)="doSuggest(form)" method="post">
+    <ion-card>
+      
+      <ion-card-content>
+        <ion-item>
+          
+          <ion-input ngModel type="text" name="name" placeholder="Name"></ion-input>
+        </ion-item>
+        <ion-item>
+          
+          <ion-input ngModel type="text"  name="mobile" placeholder="Mobile Number"></ion-input>
+        </ion-item>
+        <ion-item>
+          
+          <ion-input ngModel type="email" name="email" placeholder="Email Id"></ion-input>
+        </ion-item>
+        <ion-item>
+          
+          <ion-input ngModel type="text" name="district" placeholder="District"></ion-input>
+        </ion-item>
+        <ion-item>
+          
+          <ion-input ngModel type="text"  name="state" placeholder="State"></ion-input>
+        </ion-item>
+       <ion-item lines="none" padding-top text-center>
+          <ion-button expand="full" size="default" shape="round" type="submit" class="btnsuggest">Suggest</ion-button>
+       </ion-item>
+      </ion-card-content>
+    </ion-card>
+  </form>
+ 
+
+
+  
+</ion-content>
+
+

@@ -1,0 +1,72 @@
+ion-content.background{
+  --background: url(../../assets/images/blue-color-background-wallpaper-4.jpg) 0 0/100% 100% no-repeat;
+}
+
+
+
+.maind
+{
+  width:100%;
+  height:auto;
+  margin:0px;
+  padding:0px;
+  float:left;
+  border:1px solid #fff;
+  border-radius:5px;
+  margin-bottom:10px;
+  border-left:none;
+}
+.logomainpage
+{
+  margin-top:2%;
+}
+.logomainpage img
+{
+  width:64%;
+}
+
+.cleft
+{float:left;
+    margin-left:1px;
+  width:11%;
+ /* padding-bottom:2px;*/
+  
+}
+.cleft img
+{
+ 
+
+padding:10px 8px 8px 8px;
+}
+.cright
+{
+ /*width:80%;*/
+}
+.cright h5
+{
+font-family:arial;
+font-size:13px;
+
+ margin:auto;
+  /*padding-top:12px 10px 12px 10px;*/
+  margin:18px 6px 10px 6px;
+ float:left;
+ text-align:center;
+ 
+}
+.top1
+{
+  margin-top:10%;
+  
+}
+.subdiv
+{
+  margin-bottom:5%;
+}
+
+.rightBar{
+  background-color:red;
+  height:47px;
+  width:10px;
+  float:right;
+}

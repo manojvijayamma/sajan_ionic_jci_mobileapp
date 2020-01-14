@@ -1,0 +1,32 @@
+
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button
+            [text]="buttonText"
+            [icon]="buttonIcon">
+        </ion-back-button>
+      </ion-buttons>
+      <ion-title>
+        Clasroom List
+      </ion-title>
+      <!--
+      <ion-buttons slot="end">
+        <ion-button routerLink="/create"><ion-icon name="add-circle"></ion-icon></ion-button>
+      </ion-buttons>
+      -->
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    {{detailsData.committee_id}}
+    {{detailsData.committee_name}}
+    {{detailsData.committee_committee_name}}
+    {{detailsData.committee_lom}}
+    {{detailsData.committee_designation}}
+    {{detailsData.committee_address}}
+    {{detailsData.committee_mobile}}
+    {{detailsData.committee_email}}
+    {{detailsData.committe_pic}}
+   
+  </ion-content>

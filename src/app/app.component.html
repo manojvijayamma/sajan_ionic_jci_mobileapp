@@ -1,0 +1,61 @@
+<ion-app>
+  <ion-split-pane>
+    <ion-menu > <!-- *ngIf="auth.isAuthenticated() === true" -->
+      <ion-header>
+        <ion-toolbar>
+          <img src="assets/images/girl-avatar.png">
+          <div style="text-align:center">Version 1.3.2</div>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+
+          
+
+        <ion-list>
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
+            <ion-item [routerDirection]="'root'" [routerLink]="[p.url]">
+              <ion-icon slot="start" [name]="p.icon"></ion-icon>
+              <ion-label>
+                {{p.title}}
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+          <ion-menu-toggle auto-hide="false" >
+            <ion-item [routerDirection]="'root'" (click)="doSync()">
+              <ion-icon slot="start" name="refresh-circle"></ion-icon>
+              <ion-label>
+                Sync Data
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+
+          <ion-menu-toggle auto-hide="false" >
+            <ion-item [routerDirection]="'root'" (click)="doLogout()">
+              <ion-icon slot="start" name="log-out"></ion-icon>
+              <ion-label>
+                Logout
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+
+   
+      
+    
+    <ion-router-outlet main>
+
+        <div class="col-md-12 col-sm-12 logomainpage" text-center>
+            <img src="assets/images/logo.jpg">
+        </div>
+        
+    </ion-router-outlet>
+  </ion-split-pane>
+</ion-app>
+
+

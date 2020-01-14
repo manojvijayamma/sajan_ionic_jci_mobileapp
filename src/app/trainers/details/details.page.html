@@ -1,0 +1,62 @@
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+        <ion-back-button  defaultHref="pngb"></ion-back-button>
+      </ion-buttons>
+      <ion-title>
+        TRAINERS
+      </ion-title>
+      <!--
+      <ion-buttons slot="end">
+        <ion-button routerLink="/create"><ion-icon name="add-circle"></ion-icon></ion-button>
+      </ion-buttons>
+      -->
+    </ion-toolbar>
+  </ion-header>
+  
+  
+  
+
+  <ion-content class="backgrounddetails">
+
+    <ion-searchbar class="serch" [(ngModel)]="searchKey" ></ion-searchbar>
+    <ion-row *ngFor="let data of listData | filter : searchKey">
+        <div class="col-sm-12 col-md-12 box" >
+                <div class="col-md-12 col-sm-12" text-center>
+            <div class="col-md-6 leftimg" text-center>
+                 <img src="assets/images/jc.png">
+            </div>
+          </div>
+           <div class="col-md-12 col-sm-12" text-center>
+            <div class="col-md-6 rightcnt" text-center>
+              <h3>{{data.national_trainers_members_name}}</h3>
+              
+            </div>
+        </div>
+  
+  
+        <div class="col-md-12">
+            <div id="cont">
+                <ul>
+                  <li (click)="makecall(data.national_trainers_members_mobile)"> <ion-icon name="call"  ></ion-icon>{{data.national_trainers_members_mobile}} </li>
+                  <li (click)="savemail(data.national_trainers_members_email)"> <ion-icon name="mail"></ion-icon>{{data.national_trainers_members_email}} </li>  
+                  <li> <ion-icon name="pin"></ion-icon>{{data.national_trainers_members_address}}</li>
+                 
+              </ul>
+            </div>
+    </div>
+  </div>
+  </ion-row>
+
+
+    
+
+
+</ion-content>
+
+
+
+
+ 
+      
+

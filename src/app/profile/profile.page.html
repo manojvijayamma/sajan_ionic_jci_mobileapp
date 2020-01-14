@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <!--<ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>-->
+    <ion-buttons slot="start" (click)="dashboard()">
+      <!-- <ion-menu-button></ion-menu-button>-->
+        <ion-icon name="home" style="font-size:23px;color:#fff"></ion-icon>
+    </ion-buttons>
+    <ion-title>
+      My Profile
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content>
+
+  <form class="frm"  #form="ngForm"  method="post">
+    <ion-card>
+      
+      <ion-card-content>
+        <ion-item>
+          
+          <ion-input type="text"  name="name" placeholder="Name" readOnly value="{{name}}"></ion-input>
+        </ion-item>
+        <ion-item>
+          
+          <ion-input type="text"  name="mobile"  placeholder="Mobile Number" readOnly value="{{mobile}}"></ion-input>
+        </ion-item>
+        <ion-item>
+          
+          <ion-input type="email"  name="email" placeholder="Email Id" readOnly value="{{email}}"></ion-input>
+        </ion-item>
+        
+        
+       <ion-item lines="none" padding-top text-center>
+          <!-- <ion-button expand="full" size="default" shape="round" type="submit" class="btnsuggest">Edit</ion-button> -->
+       </ion-item>
+      </ion-card-content>
+    </ion-card>
+  </form>
+       
+     
+
+
+  
+</ion-content>
+
+

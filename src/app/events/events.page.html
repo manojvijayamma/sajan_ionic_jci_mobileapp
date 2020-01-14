@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <!--<ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>-->
+    <ion-buttons slot="start" (click)="dashboard()">
+      <!-- <ion-menu-button></ion-menu-button>-->
+        <ion-icon name="home" style="font-size:23px;color:#fff"></ion-icon>
+    </ion-buttons>
+    <ion-title>
+        EVENTS
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+  
+  <ion-content>
+    
+    <ion-row *ngFor="let data of listData">
+         <div class="col-md-12 zone" >
+           <div class="col-md-4 zcnt" text center>
+                <div class="rocnt" style="padding:20px 0px 20px 0px;" text-center>
+                      {{data.events_date}}
+                </div>
+           </div>
+           <div class="col-md-8 zright" style="margin: 16px 0px 0px 0px;font-size:13px;">
+                {{data.events_name}}
+           </div>
+        </div> 
+    </ion-row>
+
+    
+  </ion-content>
+  

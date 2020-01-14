@@ -1,0 +1,36 @@
+// http://ionicframework.com/docs/theming/
+@import '~@ionic/angular/css/core.css';
+@import '~@ionic/angular/css/normalize.css';
+@import '~@ionic/angular/css/structure.css';
+@import '~@ionic/angular/css/typography.css';
+
+@import '~@ionic/angular/css/padding.css';
+@import '~@ionic/angular/css/float-elements.css';
+@import '~@ionic/angular/css/text-alignment.css';
+@import '~@ionic/angular/css/text-transformation.css';
+@import '~@ionic/angular/css/flex-utils.css';
+
+.leftimg img{
+    border-radius: 50%;
+}
+
+.rightcnt h4
+{    
+	font-size:12px !important;
+    color:#910c1c !important;
+    margin:0px !important; 
+}
+
+.rightcnt h3
+{   
+    font-size:16px !important; 
+	margin-bottom:5px !important; 
+}
+
+ion-row .box{
+    border-bottom:6px solid #3880ff;
+}
+
+ion-content.backgrounddetails{
+    --background: url(assets/images/blue-color-background-wallpaper-4.jpg) 0 0/100% 100% no-repeat;
+}
