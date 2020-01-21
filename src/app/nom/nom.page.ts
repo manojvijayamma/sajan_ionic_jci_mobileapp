@@ -6,6 +6,8 @@ import { Router ,NavigationExtras} from '@angular/router';
 import { DatabaseProvider } from '../providers/database';
 import { LoadingService } from '../providers/loading.service';
 import { ToastController } from '@ionic/angular';
+import { EmailService } from '../providers/email.service';
+import { CallNumber } from '@ionic-native/call-number/ngx';
 
 @Component({
   selector: 'app-book',
@@ -19,10 +21,12 @@ export class NomPage implements OnInit {
 
   constructor(
     private commonService: CommonService,
+    public emailService: EmailService,
     private router: Router,
     private database: DatabaseProvider,
     public loading: LoadingService,
     private zone: NgZone   ,
+    private callNumber:CallNumber,
     public toastController: ToastController) {
       //this.GetCommitteeList();
 
@@ -63,8 +67,20 @@ export class NomPage implements OnInit {
   }
 
 
-  makecall(){}
-  savemail(){}
+  makecall(nmbr)
+    {
+    /*console.log(nmbr);
+    this.callNumber.callNumber(nmbr, true)
+      .then(() => console.log('success'), err => console.log(err))88*/
+
+
+      this.callNumber.callNumber(nmbr, true)
+  .then(res => console.log('Launched dialer!', res))
+  .catch(err => console.log('Error launching dialer', err));
+    }
+  savemail(email){
+    this.emailService.sendEmail(email);
+  }
 
 
 

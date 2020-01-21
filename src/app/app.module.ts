@@ -19,6 +19,8 @@ import { SQLite } from '@ionic-native/sqlite/ngx';
 import { CallNumber } from '@ionic-native/call-number/ngx';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { Contacts, Contact, ContactField, ContactName } from '@ionic-native/contacts/ngx';
+import { EmailService } from './providers/email.service';
+
 
 @NgModule({
   declarations: [AppComponent],
@@ -42,6 +44,7 @@ import { Contacts, Contact, ContactField, ContactName } from '@ionic-native/cont
     SQLite,CallNumber,
     StatusBar,
     Contacts,
+    EmailService,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     {

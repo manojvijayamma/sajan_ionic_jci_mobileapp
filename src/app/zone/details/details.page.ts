@@ -6,6 +6,7 @@ import { CommonService } from '../../services/common.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { DatabaseProvider } from '../../providers/database';
 import { LoadingService } from '../../providers/loading.service';
+import { EmailService } from '../../providers/email.service';
 
 @Component({
   selector: 'app-book',
@@ -24,6 +25,7 @@ export class DetailsPage implements OnInit {
 
 private callNumber:CallNumber,
     private route: ActivatedRoute,
+    public emailService: EmailService,
     private commonService: CommonService,
     private router: Router,
     private database: DatabaseProvider,
@@ -81,10 +83,10 @@ private callNumber:CallNumber,
   ngOnInit() {
       
              }
-             savemail(msg)
+             savemail(email)
 {
 
-
+  this.emailService.sendEmail(email);
 
 // this.socialSharing.shareViaEmail(null,null, [msg]).then(() => {
 //   // Success!

@@ -26,10 +26,11 @@
     "@angular/router": "8.1.1",
     "@angular/service-worker": "^8.2.14",
     "@asymmetrik/ngx-leaflet": "^6.0.1",
-    "@ionic-native/call-number": "^5.19.1",
+    "@ionic-native/call-number": "^5.18.1-beta.5",
     "@ionic-native/contacts": "^5.19.1",
     "@ionic-native/core": "5.0.0-beta.15",
     "@ionic-native/document-viewer": "^5.19.1",
+    "@ionic-native/email-composer": "^4.20.0",
     "@ionic-native/file": "^5.19.1",
     "@ionic-native/file-opener": "^5.19.1",
     "@ionic-native/file-transfer": "^5.19.1",
@@ -43,6 +44,7 @@
     "@ionic-native/status-bar": "5.0.0-beta.15",
     "@ionic/angular": "^4.11.8",
     "@ionic/storage": "^2.1.3",
+    "call-number": "^1.0.1",
     "cordova-android": "^8.1.0",
     "cordova-browser": "5.0.4",
     "cordova-ios": "^5.1.1",
@@ -129,12 +131,11 @@
       "cordova-plugin-nativegeocoder": {},
       "cordova-plugin-geolocation": {},
       "cordova-plugin-document-viewer": {},
-      "cordova-plugin-email-composer": {
-        "ANDROID_SUPPORT_V4_VERSION": "27.+"
-      },
+      "cordova-plugin-email-composer": {},
       "uk.co.workingedge.phonegap.plugin.launchnavigator": {
         "GOOGLE_API_KEY_FOR_ANDROID": "AIzaSyAPENKLKaRwapT0IdeXwsmD3alcex3lyrs"
-      }
+      },
+      "mx.ferreyra.callnumber": {}
     }
   }
 }

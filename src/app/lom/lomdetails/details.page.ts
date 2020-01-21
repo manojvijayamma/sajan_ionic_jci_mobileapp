@@ -7,6 +7,7 @@ import { DatabaseProvider } from '../../providers/database';
 import { LoadingService } from '../../providers/loading.service';
 import { CallNumber } from '@ionic-native/call-number/ngx';
 //import { SocialSharing } from '@ionic-native/social-sharing/ngx';
+import { EmailService } from '../../providers/email.service';
 
 @Component({
   selector: 'app-book',
@@ -22,7 +23,7 @@ export class LomDetailsPage implements OnInit {
 
   constructor(
     //private socialSharing: SocialSharing,
-
+    public emailService: EmailService,
 private callNumber:CallNumber,
     private route: ActivatedRoute,
     private commonService: CommonService,
@@ -85,11 +86,11 @@ showDetails(id) {
     this.router.navigate(['/lom/lomdetails',id]);
   }*/
 
-savemail(msg)
+savemail(email)
 {
 
 
-
+  this.emailService.sendEmail(email);
 // this.socialSharing.shareViaEmail(null,null, [msg]).then(() => {
 //   // Success!
 // }).catch(() => {

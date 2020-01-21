@@ -1,68 +1,13 @@
 
-1. download latest package file from git
-2. copy src folder from RVL and paste in the new folder 
-3. run npm install
-
-4. install one signal 
-
-        ionic cordova plugin add onesignal-cordova-plugin
-        npm install @ionic-native/onesignal
-
-5. install sqlite
-
-        ionic cordova plugin add cordova-sqlite-storage
-        npm install @ionic-native/sqlite  
+caller 
+--------------------	
+$ ionic cordova plugin add call-number
+$ npm install --save @ionic-native/call-number@beta
 
 
-6. File
-
-        ionic cordova plugin add cordova-plugin-file
-        npm install @ionic-native/file  
-
-7. File Opener
-
-        ionic cordova plugin add cordova-plugin-file-opener2
-        npm install @ionic-native/file-opener      
-
-8. File Transfer
-
-        ionic cordova plugin add cordova-plugin-file-transfer
-        npm install @ionic-native/file-transfer 
-
-9. Document Viewer
-
-        ionic cordova plugin add cordova-plugin-document-viewer
-        npm install @ionic-native/document-viewer      
-
-10. Geolocation
-
-        ionic cordova plugin add cordova-plugin-geolocation
-        npm install @ionic-native/geolocation        
-
-11. Native Geocoder
-
-        ionic cordova plugin add cordova-plugin-nativegeocoder
-        npm install @ionic-native/native-geocoder                       
-
-12 Launch Navigator
-
-        ionic cordova plugin add uk.co.workingedge.phonegap.plugin.launchnavigator
-        ionic cordova plugin add uk.co.workingedge.phonegap.plugin.launchnavigator --variable GOOGLE_API_KEY_FOR_ANDROID="AIzaSyAPENKLKaRwapT0IdeXwsmD3alcex3lyrs"
-
-        npm install @ionic-native/launch-navigator    
+email
+-------------
+ionic cordova plugin add cordova-plugin-email-composer
+npm install @ionic-native/email-composer
 
 
-13. leaflet 
-
-        npm install leaflet
-        npm install @asymmetrik/ngx-leaflet   
-
-
-14. swiper
-
-        npm i swiper
-        npm i ngx-swiper-wrapper
-
-
-
-15. copy paste angular.json file

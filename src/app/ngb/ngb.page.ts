@@ -11,6 +11,7 @@ import { CallNumber } from '@ionic-native/call-number/ngx';
 //import { ModalController } from '@ionic/angular';
 //import { SocialSharing } from '@ionic-native/social-sharing/ngx';
 import { Contacts, Contact, ContactField, ContactName } from '@ionic-native/contacts/ngx';
+import { EmailService } from '../providers/email.service';
 
 @Component({
   selector: 'app-book',
@@ -25,6 +26,7 @@ export class NgbPage implements OnInit {
 
   constructor(
     private contacts: Contacts,
+    public emailService: EmailService,
     //private socialSharing: SocialSharing,
     private commonService: CommonService,
     private callNumber:CallNumber,
@@ -123,10 +125,10 @@ contact.save().then(
 }
 
 //popup
-savemail(msg)
+savemail(email)
 {
 
-
+  this.emailService.sendEmail(email);
 
 // this.socialSharing.shareViaEmail(null,null, [msg]).then(() => {
 //   // Success!
